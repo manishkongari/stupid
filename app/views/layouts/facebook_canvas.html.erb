@@ -2,31 +2,36 @@
 <html>
 <head>
   <title>Stupidcupid</title>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ember.js/1.7.0/ember.min.js"></script>
 <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
  <script src="/ember.js"></script> 
 </head>
 <body>
 <script>
-  window.fbAsyncInit = function() {
+
+$(document).ready(function() {
+  $.ajaxSetup({ cache: true });
+  $.getScript('//connect.facebook.net/en_UK/all.js', function(){
     FB.init({
-      appId      : '1465011740446158',
-      xfbml      : true,
-      version    : 'v2.1'
-    });
-
-    // ADD ADDITIONAL FACEBOOK CODE HERE
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+      appId: '1465011740446158',
+    });     
+    $('#loginbutton,#feedbutton').removeAttr('disabled');
+    FB.getLoginStatus(updateStatusCallback);
+  });
+});
+ FB.login(function(response) {
+   if (response.authResponse) {
+     console.log('Welcome!  Fetching your information.... ');
+     FB.api('/me', function(response) {
+       console.log('Good to see you, ' + response.name + '.');
+     });
+   } else {
+     console.log('User cancelled login or did not fully authorize.');
+   }
+ });
 </script>
+
 <table>
 <tr>
 <td> <img src="/stup.png" alt="Stup" style="width:80px;height:80px"></td>
