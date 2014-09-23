@@ -60,7 +60,7 @@ function statusChangeCallback(response) {
    var oauth_url = 'https://www.facebook.com/dialog/oauth/';
         oauth_url += '?client_id=1465011740446158'; //Your Client ID
         oauth_url += '&redirect_uri=' + 'https://apps.facebook.com/stupidcupidd/'; //Send them here if they're not logged in
-        oauth_url += '&scope=user_about_me,public_profile,email,publish_actions,manage_notifications';
+        oauth_url += '&scope=user_about_me,public_profile,email,publish_actions,manage_notifications,user_friends';
     
         window.top.location = oauth_url;
 
@@ -100,7 +100,7 @@ function statusChangeCallback(response) {
         });
     FB.api('/me', function(info) {
         console.log(info);
-            $('#welcome').html("Hello there " + info.birthday );
+            $('#welcome').html("Hello there " + info.user_friends);
       });
 
 
