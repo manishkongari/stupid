@@ -96,6 +96,6 @@ function statusChangeCallback(response) {
     FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
-        'Hello, Mr' + response.name + '!';
+        'Hello, Mr. ' + response.name + '!';
         $('div.hide').hide(); });
   }
