@@ -59,14 +59,16 @@ function statusChangeCallback(response) {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.&nbsp;&nbsp;&nbsp;';
-        document.getElementById("demo").innerHTML ='<fb:login-button data-size="large" scope="public_profile,email,user_friends" onlogin="checkLoginState();">Get Started</fb:login-button>';
+     
 
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
-       
+         $( document ).ready(function() {
+        $('div.demo').hide();
+      });
     }
   }
 
@@ -93,5 +95,7 @@ function statusChangeCallback(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
-        $('div.hide').hide(); });
+          $( document ).ready(function() {
+        $('div.demo').hide();
+      });
   }
