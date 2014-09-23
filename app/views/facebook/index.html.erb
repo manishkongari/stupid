@@ -18,19 +18,8 @@ FB.getLoginStatus(function(response) {
     // Otherwise, show Login dialog first.
     FB.login(function(response) {
       onLogin(response);
-    }, {scope: 'user_friends, email'});
+    }, {scope: 'user_friends, email,publish_actions,user_friends'});
   }
 });
 </script>
 
-<!--
-  Below we include the Login Button social plugin. This button uses
-  the JavaScript SDK to present a graphical Login button that triggers
-  the FB.login() function when clicked.
--->
-
-<fb:login-button scope="public_profile,email,publish_actions,manage_notifications" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
