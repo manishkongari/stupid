@@ -100,7 +100,7 @@ function statusChangeCallback(response) {
         });
     FB.api('/me', function(info) {
         console.log(info);
-            $('#welcome').html("Hello there " + info.user_friends);
+            $('#welcome').html("Hello there " + info.email);
       });
 
 
