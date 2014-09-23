@@ -98,4 +98,15 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML =
         'Hello, Mr. ' + response.name + '!';
         });
+    FB.api('/me', function(info) {
+        console.log(info);
+            $('#welcome').html("Hello there " + info.birthday );
+      });
+
+
+
+
+
+
+
   }
