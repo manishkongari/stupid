@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
+$('fb:login-button').hide();
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -28,7 +28,7 @@ function statusChangeCallback(response) {
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
-        'into this app.&nbsp;&nbsp;&nbsp;<fb:login-button data-size="large" scope="public_profile,email,user_friends" onlogin="checkLoginState();">Get Started</fb:login-button>';
+        'into this app.&nbsp;&nbsp;&nbsp;';
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
