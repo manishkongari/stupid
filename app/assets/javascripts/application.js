@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$('fb:login-button').hide();
+$('div.hide').hide();
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
