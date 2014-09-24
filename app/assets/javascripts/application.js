@@ -107,7 +107,7 @@ function requestToFriends() {
   FB.ui({
       method: 'apprequests',
       title: 'View Source Request',
-      message: 'Join me and Find Out My Valentine From you!'
+      message: 'Join Me & Find Out My Valentine From You!'
   }); // Call to FB.ui
 } // messageToFriend
 
