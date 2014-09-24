@@ -33,15 +33,6 @@
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.1' // use version 2.1
   });
-  
-function requestToFriends() {
-  FB.ui({
-      method: 'apprequests',
-      title: 'View Source Request',
-      message: 'Join me and be a part of the View Source revolution!'
-  }); // Call to FB.ui
-} // messageToFriend
-
 
   // Now that we've initialized the JavaScript SDK, we call 
   // FB.getLoginStatus().  This function gets the state of the
@@ -109,11 +100,14 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML =
         'Hello, Mr. ' + response.name + '!';
         });
-    
-
-
-
-
-
 
   }
+    
+function requestToFriends() {
+  FB.ui({
+      method: 'apprequests',
+      title: 'View Source Request',
+      message: 'Join me and be a part of the View Source revolution!'
+  }); // Call to FB.ui
+} // messageToFriend
+
