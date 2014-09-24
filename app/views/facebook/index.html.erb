@@ -6,3 +6,12 @@
    <p class="lead"><font color="#C48793"><span class=" glyphicon glyphicon-heart"></span><span id="status"></span>&nbsp;&nbsp;Now, Find out if your crush likes you back!!<span class=" glyphicon glyphicon-heart"></span></font></p>
 <div id="shareBtn" class="btn btn-success clearfix">Share Dialog</div>
      </center>
+<script>
+document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    display: 'popup',
+    method: 'share',
+    href: 'https://apps.facebook.com/stupidcupidd/',
+  }, function(response){});
+}
+</script>

@@ -102,13 +102,7 @@ function statusChangeCallback(response) {
         });
 
   }
-document.getElementById('shareBtn').onclick = function() {
-  FB.ui({
-    display: 'popup',
-    method: 'share',
-    href: 'https://apps.facebook.com/stupidcupidd/',
-  }, function(response){});
-}
+
 function requestToFriends() {
   FB.ui({
       method: 'apprequests',
@@ -116,4 +110,5 @@ function requestToFriends() {
       message: 'Join Me & Find Out My Valentine From You!'
   }); // Call to FB.ui
 } // messageToFriend
+
 
