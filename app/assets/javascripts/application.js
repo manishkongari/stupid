@@ -112,12 +112,4 @@ function requestToFriends() {
 } // messageToFriend
 
 
-$(document).ready(function(
-document.getElementById('shareBtn').onclick = function() {
-  FB.ui({
-    display: 'popup',
-    method: 'share',
-    href: 'https://apps.facebook.com/stupidcupidd/',
-  }, function(response){});
-}
-);
+
