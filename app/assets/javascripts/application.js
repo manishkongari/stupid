@@ -110,7 +110,13 @@ function statusChangeCallback(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('mail').innerHTML =response.email + '';
         });
-         FB.api('/me/friends', function(response) {
+        
+
+
+  }
+ function renderMFS() {
+ // First get the list of friends for this user with the Graph API
+ FB.api('/me/friends', function(response) {
    var container = document.getElementById('mfs');
    var mfsForm = document.createElement('form');
    mfsForm.id = 'mfsForm';
@@ -134,10 +140,6 @@ function statusChangeCallback(response) {
      mfsForm.appendChild(sendButton);
    });
  }
-
-
-  }
-
 function requestToFriends() {
   FB.ui({
       method: 'apprequests',
