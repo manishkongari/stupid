@@ -140,6 +140,9 @@ function renderMFS() {
      mfsForm.appendChild(sendButton);
    });
  }
+  
+
+
     FB.Event.subscribe('auth.statusChange', function(response) {
     Log.info('Status Change Event', response);
     if (response.status === 'connected') {
