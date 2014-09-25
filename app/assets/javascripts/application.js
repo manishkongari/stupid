@@ -29,7 +29,8 @@
   FB.init({
     appId      : '1465011740446158',
     cookie     : true,  // enable cookies to allow the server to access 
-                        // the session
+             oauth  : true,
+      frictionlessRequests : true,                 // the session
     xfbml      : true,  // parse social plugins on this page
     version    : 'v2.1' // use version 2.1
   });
@@ -110,7 +111,7 @@ function statusChangeCallback(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('mail').innerHTML =response.email + '';
         });
-        
+
 
 
   }
