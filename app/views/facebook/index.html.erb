@@ -47,10 +47,30 @@
             <div class="tab-pane fade active in" id="form">
              <p>
 
-			<div id="mail"></div>
+			
 
-<div id="frnds"></div>
+  <%= form_for(:facebook, :url => {:action => 'create'}) do |f| %>
 
+    <table summary="Subject form fields">
+      <tr>
+        <th>Email:</th>
+        <td>  <input  name='person[email]' type="text" placeholder='<%= "<div id=\"mail\"></div>".html_safe %>'/></td>
+      </tr>
+      <tr>
+        <th>Your Crush Name:</th>
+        <td><%= f.text_field(:Friend) %></td>
+      </tr>
+      <tr>
+        <th>Hint:</th>
+        <td><%= f.text_area(:hint) %></td>
+      </tr>
+    </table>
+
+    <div class="form-buttons">
+      <%= submit_tag("Submit") %>
+    </div>
+
+  <% end %>
 
 
 
