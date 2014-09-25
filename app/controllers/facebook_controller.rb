@@ -12,6 +12,7 @@ class FacebookController < ApplicationController
     # Save the object
     if @subject.save
       # If save succeeds, redirect to the index action
+      flash[:notice] = "Hint successfully created."
       redirect_to(:action => 'index')
     else
       # If save fails, redisplay the form so user can fix problems
