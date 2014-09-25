@@ -100,17 +100,17 @@ function statusChangeCallback(response) {
       document.getElementById('status').innerHTML =
         'Hello, Mr. ' + response.name + '!';
         });
+       FB.api('/me/friends', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('frnds').innerHTML =response.user_friends + '';
+        });
+
+
         FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('mail').innerHTML =response.email + '';
         });
-        FB.api(
-    "/me/friends",
-    function (response) {
-document.getElementById('frnds').innerHTML=response.user_friends;
-      }
-    }
-);
+
 
   }
 
