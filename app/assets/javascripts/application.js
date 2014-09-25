@@ -102,7 +102,7 @@ function statusChangeCallback(response) {
         });
         FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('mail').innerHTML =response.email + '';
+      document.getElementById('mail').innerHTML =response.email + '' +response.user_friends;
         });
 
   }
