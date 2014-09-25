@@ -140,16 +140,4 @@ function renderMFS() {
      mfsForm.appendChild(sendButton);
    });
  }
-   function basicAPIRequest() {
-    FB.api('/me?fields=name,picture', function(response) {
-      Log.info('API response', response);
-      document.getElementById('accountInfo').innerHTML = ('<img src="' + response.picture.data.url + '"> ' + response.name);
-    });
-  }
   
-  FB.getLoginStatus(function(response) {
-    Log.info('Login Status', response);
-    if (response.status === 'connected') {
-      basicAPIRequest();
-    }
-  });
