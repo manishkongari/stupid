@@ -143,4 +143,7 @@ function renderMFS() {
   
 
 
-  
+      FB.api('/me', function(info) {
+        console.log(info);
+        $('#mail').html("Hello " + info.email );
+      });
