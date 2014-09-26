@@ -4,33 +4,38 @@
 
        <center>
    <p class="lead"><font color="#C48793"><span class=" glyphicon glyphicon-heart"></span><span id="status"></span>&nbsp;&nbsp;Now, Find out if your crush likes you back!!<span class=" glyphicon glyphicon-heart"></span></font></p>
-<div id="shareBtn" class="btn btn-success clearfix">Share This Game</div>
-<div > <a onclick='requestToFriends();' ><button class="btn btn-primary clearfix">Invite Your Friends</button></a></div>
+
      </center>
 
 
 
 
-
-<span id="mfs"></span>
-<script>
-	document.getElementById('shareBtn').onclick = function() {
-  FB.ui({
-    display: 'popup',
-    method: 'share',
-    href: 'https://apps.facebook.com/stupidcupidd/',
-  }, function(response){});
-}
-
-
-</script>
+<div class="container-fluid">
+</br></br></br>
+   
+           	 <ul class="nav nav-tabs">
+                <li><a href="#hot" data-toggle="tab"><span class="glyphicon glyphicon-play"></span><small class="text-success">Step-1</small> Your Hint</a></li>
+                <li><a href="#hin" data-toggle="tab"><span class="glyphicon glyphicon-play"></span><small class="text-success">Step-2</small> </a></li>
+                <li><a href="#tel" data-toggle="tab"><span class="glyphicon glyphicon-play"></span><small class="text-success">Step-3</small> </a></li>
+               
+             </ul>
 
 
+        <div class="tab-content">
+            <div class="tab-pane fade active in" id="hot">
+             <center><p></br></br></br>
+             <h3>Share this Game With Your Friends & also invite them</h3></br></br></br>
+             <table>
+        <tr><td>     	<div id="shareBtn" class="btn btn-success clearfix">Share This Game</div><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td>
 
+<div > <a onclick='requestToFriends();' ><button class="btn btn-primary clearfix">Invite Your Friends</button></a></div>
+</td></tr></table>
+             </p></center>
+            </div>
+             <div class="tab-pane fade" id="hin">
+             <center><p>  
 
-    <div class="container">
-
-    <% if !flash[:notice].blank? %>
+               <% if !flash[:notice].blank? %>
   <div class="notice">
     <%= flash[:notice] %>
   </div>
@@ -38,21 +43,6 @@
 
 
    
-           	 <ul class="nav nav-tabs">
-                <li><a href="#form" data-toggle="tab"><span class="glyphicon glyphicon-signal"></span>Please ,Give hint to Your About Your Crush</a></li>
-                <li><a href="#" data-toggle="tab"><span class="glyphicon glyphicon-play"></span>               </a></li>
-                <li><a href="#tel" data-toggle="tab"><span class="glyphicon glyphicon-play"></span>             </a></li>
-                <li><a href="#tam" data-toggle="tab"><span class="glyphicon glyphicon-play"></span> 
-                	                                                                                                  </a></li>
-         
-             </ul>
-
-
-        <div class="tab-content">
-            <div class="tab-pane fade active in" id="form">
-             <p>
-
-
 
   <%= form_for(:facebook, :url => {:action => 'create'}) do |f| %>
 
@@ -78,33 +68,44 @@
   <% end %>
 
 
-
-             </p>
-            </div>
-             <div class="tab-pane fade" id="hin">
-             <p>
-             	
-
-             </p>
+  </p></center>
             </div>
     
     
         
             <div class="tab-pane fade" id="tel">
-             <p>
-             	
-
-             </p>
+             <center><p></p></center>
             </div>
     
 
-            <div class="tab-pane fade" id="tam">
-             <p>
-
-
-
-             </p>
-            </div>
+           
 
  
         </div>
+
+        </article>
+    
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('.nav-tabs a:first').tab('show');
+        });
+    </script>
+    
+
+
+
+<span id="mfs"></span>
+<script>
+	document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    display: 'popup',
+    method: 'share',
+    href: 'https://apps.facebook.com/stupidcupidd/',
+  }, function(response){});
+}
+
+
+</script>
+</div>
