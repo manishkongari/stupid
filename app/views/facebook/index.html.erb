@@ -47,9 +47,13 @@
   <%= form_for(:facebook, :url => {:action => 'create'}) do |f| %>
 
     <table summary="Subject form fields">
-      <tr>
+     <tr>
         <th>Email:</th>
-        <td>  <div id="mail" ></div></td>
+        <td> <div id="mail"></div></td>
+      </tr>
+      <tr>
+        <th>Confirm Email:</th>
+        <td>  <%= f.text_field(:Friend,{:size=>"35"}) %></td>
       </tr>
       <tr>
         <th>Your Crush Name:</th>
