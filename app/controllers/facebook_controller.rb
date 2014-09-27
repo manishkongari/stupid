@@ -9,7 +9,6 @@ class FacebookController < ApplicationController
   	
   end
   def show
-  
   end
   def create
     # Instantiate a new object using form parameters
