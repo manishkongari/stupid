@@ -17,7 +17,9 @@ class FacebookController < ApplicationController
       redirect_to(:action => 'index')
     else
       # If save fails, redisplay the form so user can fix problems
-      render('new')
+      flash[:notice] = "Please  Check something was missing."
+      redirect_to(:action=>'index')
+      
     end
   end
 
