@@ -10,7 +10,7 @@ class FacebookController < ApplicationController
   	
   end
   def show
-    @fr = Fb.find_by_friend(params[:id])
+    @fr = Fb.find_by_userid(params[:id])
   end
   def create
     # Instantiate a new object using form parameters
