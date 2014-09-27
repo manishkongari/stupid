@@ -5,10 +5,10 @@ class FacebookController < ApplicationController
   after_filter :allow_iframe
 
   def index
-  	
+  	@fb = Fb.all
   end
   def show
-    @fb = Fb.all
+    
   end
   def create
     # Instantiate a new object using form parameters
