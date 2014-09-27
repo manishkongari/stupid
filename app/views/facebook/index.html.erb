@@ -47,17 +47,14 @@
   <%= form_for(:facebook, :url => {:action => 'create'}) do |f| %>
 
     <table summary="Subject form fields">
-     <tr>
-        <th>Email:</th>
-        <td> <div id="mail"></div></td>
-      </tr>
+
            <tr>
         <th>Your Name:</th>
         <td><input type="text" size="35" name="facebook[name]" id="facebook_name"></td>
       </tr>
       <tr>
-        <th>Re-enter Email:</th>
-        <td>  <%= f.text_field(:email,{:size=>"35",:type=>"email"}) %></td>
+        <th>Email:</th>
+        <td>  <%= f.text_field(:email,{:size=>"35",:type=>"email",:id=>"checkmail"}) %></td>
       </tr>
       <tr>
         <th>Your Crush Name:</th>
@@ -80,6 +77,7 @@
 <script>
 
     document.getElementById("facebook_name").disabled = true;
+       document.getElementById("ckeckmail").disabled = true;
 </script>
   </p></center>
             </div>
