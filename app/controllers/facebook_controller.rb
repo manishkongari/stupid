@@ -8,7 +8,7 @@ class FacebookController < ApplicationController
   end
   def create
     # Instantiate a new object using form parameters
-    @subject = Facebook.new(subject_params)
+    @subject = Fb.new(subject_params)
     # Save the object
     if @subject.save
       # If save succeeds, redirect to the index action

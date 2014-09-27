@@ -11,9 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140925222331) do
+ActiveRecord::Schema.define(version: 20140927082009) do
 
   create_table "facebooks", force: true do |t|
+    t.integer  "userid"
+    t.string   "name"
+    t.string   "email"
+    t.string   "friend"
+    t.string   "hint"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fbs", force: true do |t|
     t.integer  "userid"
     t.string   "name"
     t.string   "email"
