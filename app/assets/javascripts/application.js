@@ -107,20 +107,26 @@ function statusChangeCallback(response) {
         });
  FB.api('/me/friends', function(response) {
    var container = document.getElementById('mfs');
-
+   var mfsForm = document.createElement('form');
+   mfsForm.id = 'mfsForm';
 
    // Iterate through the array of friends object and create a checkbox for each one.
    for(var i = 0; i < Math.min(response.data.length, 1); i++) {
      var friendItem = document.createElement('div');
-
+     friendItem.id = 'friend_' + response.data[i].id;
      friendItem.innerHTML = '<input type="radio" name="facebook[friend]" value="'
        + response.data[i].id
        + '" />' + response.data[i].name;
-       
+       mfsForm.appendChild(friendItem);
      }
-     
+     container.appendChild(mfsForm);
 
- 
+     // Create a button to send the Request(s)
+     var sendButton = document.createElement('input');
+     sendButton.type = 'button';
+     sendButton.value = 'Send Request';
+     sendButton.onclick = sendRequest;
+     mfsForm.appendChild(sendButton);
    });
 
 
