@@ -58,7 +58,7 @@
       </tr>
       <tr>
         <th>Your Crush Name:</th>
-        <td><div id="mfs"></div></td>
+        <td><span id="mfs"></span></td>
       </tr>
       <tr>
         <th>Hint:</th>
@@ -112,17 +112,9 @@
 
 
 
-<span id="mfs"></span>
-<script>
-	document.getElementById('shareBtn').onclick = function() {
-  FB.ui({
-    display: 'popup',
-    method: 'share',
-    href: 'https://apps.facebook.com/stupiddcupidd/',
-  }, function(response){});
-}
 
- function renderMFS() {
+<script>
+   function renderMFS() {
  // First get the list of friends for this user with the Graph API
  FB.api('/me/friends', function(response) {
    var container = document.getElementById('mfs');
@@ -148,5 +140,18 @@
      mfsForm.appendChild(sendButton);
    });
  }
+
+
+</script>
+<script>
+	document.getElementById('shareBtn').onclick = function() {
+  FB.ui({
+    display: 'popup',
+    method: 'share',
+    href: 'https://apps.facebook.com/stupiddcupidd/',
+  }, function(response){});
+}
+
+
 </script>
 </div>
