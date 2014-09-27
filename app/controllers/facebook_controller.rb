@@ -5,10 +5,11 @@ class FacebookController < ApplicationController
   after_filter :allow_iframe
 
   def index
-  	@fb = Fb.all
+    @fb=fb.find.all
+  	
   end
   def show
-    
+    @fr = Fb.find_by_friend(params[:id])
   end
   def create
     # Instantiate a new object using form parameters

@@ -88,9 +88,7 @@
 <%= tab.email %>
 <%= tab.friend %>
 <%= tab.hint %>
-<h3>Still, No reply from your crush</h3>
-
-<p>                             </p>
+ <%= link_to("Show", {:action => 'show', :id => tab.name}, :class => 'action show') %>
 <%end%>
 
 
