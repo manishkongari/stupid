@@ -60,8 +60,8 @@ function statusChangeCallback(response) {
     } else if (response.status === 'not_authorized') {
       // The person is logged into Facebook, but not your app.
         var oauth_url = 'https://www.facebook.com/dialog/oauth/';
-        oauth_url += '?client_id=1465011740446158'; //Your Client ID
-        oauth_url += '&redirect_uri=' + 'https://apps.facebook.com/stupidcupidd/'; //Send them here if they're not logged in
+        oauth_url += '?client_id=864187560267679'; //Your Client ID
+        oauth_url += '&redirect_uri=' + 'https://apps.facebook.com/stupiddcupidd/'; //Send them here if they're not logged in
         oauth_url += '&scope=user_about_me,public_profile,email,publish_actions,manage_notifications,user_friends';
     
         window.top.location = oauth_url;
