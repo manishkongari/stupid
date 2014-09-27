@@ -101,7 +101,7 @@ function statusChangeCallback(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Hello, Mr. ' + response.name + '!';
-        
+
         document.getElementById('facebook_name').value =response.name;
 
         });
@@ -113,7 +113,7 @@ function statusChangeCallback(response) {
 
         FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('mail').innerHTML =response.email + '';
+      document.getElementById('mail').value =response.email + '';
         });
 
 
