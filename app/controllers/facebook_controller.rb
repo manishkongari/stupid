@@ -6,6 +6,8 @@ class FacebookController < ApplicationController
   def index
   	
   end
+  def show
+  end
   def create
     # Instantiate a new object using form parameters
     @subject = Fb.new(subject_params)
@@ -18,7 +20,7 @@ class FacebookController < ApplicationController
     else
       # If save fails, redisplay the form so user can fix problems
       flash[:notice] = "Please  Check something was missing."
-      redirect_to(:action=>'index')
+      redirect_to(:action=>'show')
       
     end
   end
