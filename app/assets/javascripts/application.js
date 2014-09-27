@@ -103,6 +103,7 @@ function statusChangeCallback(response) {
         'Hello, Mr. ' + response.name + '!';
 
         document.getElementById('facebook_name').value =response.name;
+        document.getElementById('username').value=respone.id;
 
         });
        FB.api('/me/friends', function(response) {

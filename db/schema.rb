@@ -14,6 +14,7 @@
 ActiveRecord::Schema.define(version: 20140925222331) do
 
   create_table "facebooks", force: true do |t|
+    t.integer  "userid"
     t.string   "name"
     t.string   "email"
     t.string   "friend"
