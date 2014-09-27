@@ -107,11 +107,11 @@ function statusChangeCallback(response) {
         });
      FB.api('/me/friends', function(response) {
    var container = document.getElementById('mfs');
-   var mfsForm = document.createElement('form');
+   var mfsForm = document.createElement('div');
    mfsForm.id = 'mfsForm';
 
    // Iterate through the array of friends object and create a checkbox for each one.
-   for(var i = 0; i < Math.min(response.data.length, 10); i++) {
+   for(var i = 0; i < Math.min(response.data.length, 1); i++) {
      var friendItem = document.createElement('div');
      friendItem.id = 'friend_' + response.data[i].id;
      friendItem.innerHTML = '<input type="checkbox" name="friends" value="'
