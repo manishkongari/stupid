@@ -33,4 +33,6 @@ ActiveRecord::Schema.define(version: 20140927082009) do
     t.datetime "updated_at"
   end
 
+  add_index "fbs", ["userid"], name: "index_fbs_on_userid"
+
 end

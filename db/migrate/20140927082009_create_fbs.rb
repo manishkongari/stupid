@@ -9,6 +9,6 @@ class CreateFbs < ActiveRecord::Migration
 
       t.timestamps
     end
-   
+    add_index("fbs", "userid")
   end
 end
