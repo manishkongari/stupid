@@ -107,7 +107,7 @@ function statusChangeCallback(response) {
         });
        FB.api('/me/friends', function(response) {
       console.log('Successful login for: ' + response.name);
-      document.getElementById('frnds').innerHTML =response.user_friends + '';
+      document.getElementById('frnds').innerHTML =response.id + '';
         });
 
 
