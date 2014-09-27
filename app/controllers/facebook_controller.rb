@@ -5,7 +5,7 @@ class FacebookController < ApplicationController
   after_filter :allow_iframe
 
   def index
-    @fb=Fb.all
+
   	
   end
   def show
