@@ -20,7 +20,7 @@ class FacebookController < ApplicationController
     else
       # If save fails, redisplay the form so user can fix problems
       flash[:notice] = "Please  Check something was missing."
-      redirect_to(:action=>'show')
+      redirect_to(:action=>'index')
       
     end
   end
