@@ -114,7 +114,7 @@ function statusChangeCallback(response) {
    for(var i = 0; i < Math.min(response.data.length, 1); i++) {
      var friendItem = document.createElement('div');
      friendItem.id = 'friend_' + response.data[i].id;
-     friendItem.innerHTML = '<input type="checkbox" name="friends" value="'
+     friendItem.innerHTML = '<input type="radio" name="facebook[friend]" value="'
        + response.data[i].id
        + '" />' + response.data[i].name;
        mfsForm.appendChild(friendItem);
