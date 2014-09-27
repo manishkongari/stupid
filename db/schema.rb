@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140927082009) do
   end
 
   create_table "fbs", force: true do |t|
-    t.integer  "userid",     limit: 15
+    t.string   "userid",     limit: 8
     t.string   "name"
     t.string   "email"
     t.string   "friend"
