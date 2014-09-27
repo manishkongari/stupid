@@ -1,4 +1,5 @@
 class FacebookController < ApplicationController
+
   layout "facebook_canvas"
 
   after_filter :allow_iframe
@@ -7,6 +8,7 @@ class FacebookController < ApplicationController
   	
   end
   def show
+    @fb = Fb.all
   end
   def create
     # Instantiate a new object using form parameters

@@ -83,10 +83,14 @@
             <div class="tab-pane fade" id="tel">
              <center><p>
              	         	</br></br></br>
-<%if true%>
+<% @fb.each do |tab| %>
+<%= tab.name %>
+<%= tab.email %>
+<%= tab.friend %>
+<%= tab.hint %>
 <h3>Still, No reply from your crush</h3>
 <%else%>
-<p></p>
+<p>                             </p>
 <%end%>
 
 
