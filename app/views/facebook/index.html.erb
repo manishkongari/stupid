@@ -84,11 +84,12 @@
              <center><p>
              	         	</br></br></br>
 <% @fb.each do |tab| %>
-<%= tab.name %>
+<% if tab.name==(:id=>"facebook_name") %>
 <%= tab.email %>
-<%= tab.friend %>
+
 <%= tab.hint %>
  <%= link_to("Show", {:action => 'show', :id => tab.friend}) %>
+ <%end%>
 <%end%>
 
 
