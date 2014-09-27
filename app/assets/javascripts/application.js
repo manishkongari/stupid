@@ -106,7 +106,7 @@ function statusChangeCallback(response) {
 
         });
        FB.api('/me/friends', function(response) {
-      document.getElementById('frnds').innerHTML =response.data[1].name + '';
+      document.getElementById('frnds').innerHTML =response.data[0].name + '';
         });
 
 
