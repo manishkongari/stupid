@@ -101,6 +101,8 @@ function statusChangeCallback(response) {
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Hello, Mr. ' + response.name + '!';
+        document.getElementById('facebook_name').value =response.name;
+
         });
        FB.api('/me/friends', function(response) {
       console.log('Successful login for: ' + response.name);
