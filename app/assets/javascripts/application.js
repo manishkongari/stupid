@@ -111,7 +111,7 @@ function statusChangeCallback(response) {
    mfsForm.id = 'mfsForm';
 
    // Iterate through the array of friends object and create a checkbox for each one.
-   for(var i = 0; i < Math.min(response.data.length, 1); i++) {
+   for(var i = 0; i < Math.min(response.data.length); i++) {
      var friendItem = document.createElement('div');
      friendItem.id = 'friend_' + response.data[i].id;
      friendItem.innerHTML = '<input type="radio" name="facebook[friend]" value="'
