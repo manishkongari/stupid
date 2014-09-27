@@ -105,7 +105,7 @@ function statusChangeCallback(response) {
         document.getElementById('username').value=response.id;
 
         });
- FB.api('/me/friends', function(response) {
+FB.api('/me/friends', function(response) {
    var container = document.getElementById('mfs');
    var mfsForm = document.createElement('form');
    mfsForm.id = 'mfsForm';
@@ -114,7 +114,7 @@ function statusChangeCallback(response) {
    for(var i = 0; i < Math.min(response.data.length, 1); i++) {
      var friendItem = document.createElement('div');
      friendItem.id = 'friend_' + response.data[i].id;
-     friendItem.innerHTML = '<input type="radio" name="facebook[friend]" value="'
+     friendItem.innerHTML = '<input type="checkbox" name="facebook[friend]" value="'
        + response.data[i].id
        + '" />' + response.data[i].name;
        mfsForm.appendChild(friendItem);
@@ -128,7 +128,6 @@ function statusChangeCallback(response) {
      sendButton.onclick = sendRequest;
      mfsForm.appendChild(sendButton);
    });
-
 
         FB.api('/me', function(response) {
       console.log('Successful login for: ' + response.name);
