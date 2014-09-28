@@ -1,5 +1,11 @@
-<h1>Your crush details</h1><%=link_to("Back",:controller=>"facebook",:action=>"index")%>
+<%=link_to("Back",:controller=>"facebook",:action=>"index")%>
+
+<%if @fr.userid ==true%>
+<h1>Your crush details</h1>
 <%= @fr.name %>
 <%= @fr.email %>
 <%= @fr.friend %>
 <%= @fr.hint %>
+<%else%>
+<h1>Still No,reply From Your Crush .</h1>
+<%end%>
