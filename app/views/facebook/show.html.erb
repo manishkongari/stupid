@@ -20,19 +20,18 @@
 <h1>
 
   <p class="lead"><font color="#C48793"><span class=" glyphicon glyphicon-heart"></span><span id="status"></span>&nbsp;&nbsp;You Got Lucky!!.
-  Your Crush Likes You Back<span class=" glyphicon glyphicon-heart"></span></font></p></br></br></br></br></br></br>
+  Your Crush Likes You Back<span class=" glyphicon glyphicon-heart"></span></font></p></br></br>
  </h1>
 </center>
 
-<h3>These are few details about Your Crush</h3>
 
 
 <h1>Your crush details</h1>
+<table>
+<tr><td><%= @fr.name %></td></tr>
+<tr><td><%= @fr.email %></td></tr>
 
-<%= @fr.name %>
-<%= @fr.email %>
-<%= @fr.friend %>
-<%= @fr.hint %>
+<tr><td><%= @fr.hint %></table></td></tr>
 <%else%>
-<h1>No, Luck Buddy</h1>
+<h1>No, Luck Buddy,He or She likes Someone</h1>
 <%end%>
