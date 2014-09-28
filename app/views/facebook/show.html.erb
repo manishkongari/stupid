@@ -16,7 +16,7 @@
 </head>
 <body background="back.png">
 <center>
-
+<%if @fr.userid ==@check.friend%>
 <h1>
 
   <p class="lead"><font color="#C48793"><span class=" glyphicon glyphicon-heart"></span><span id="status"></span>&nbsp;&nbsp;You Got Lucky!!.
@@ -28,8 +28,11 @@
 
 
 <h1>Your crush details</h1>
+
 <%= @fr.name %>
 <%= @fr.email %>
 <%= @fr.friend %>
 <%= @fr.hint %>
-
+<%else%>
+<h1>No, Luck Buddy</h1>
+<%end%>
