@@ -84,10 +84,11 @@
              <center><p>
              	         	</br></br></br>
 <% @fb.each do |tab| %>
+<p><b>Your Email</b></p>
 <%= tab.email %>
-<%= tab.userid %>
-<%= tab.hint %>
-<%= tab.friend %>
+<b>Your Userid</b><%= tab.userid %>
+<b>Your Hint</b><%= tab.hint %>
+<b>Your Friend</b><%= tab.friend %>
  <%= link_to("Show", {:action => 'show', :id => tab.friend}) %>
  <%end%>
 
