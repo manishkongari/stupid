@@ -1,11 +1,36 @@
-<%=link_to("Back",:controller=>"facebook",:action=>"index")%>
+<link href="https//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" rel='javascript'>
 
-<%if @fr.userid ==true%>
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+<center
+
+<%=link_to("Back",:controller=>"facebook",:action=>"index")%>><h1>
+
+  <p class="lead"><font color="#C48793"><span class=" glyphicon glyphicon-heart"></span><span id="status"></span>&nbsp;&nbsp;You Got Lucky!!.
+  Your Crush Likes You Back<span class=" glyphicon glyphicon-heart"></span></font></p></br></br></br></br></br></br>
+ </h1>
+</center>
+
+<h3>These are few details about Your Crush</h3>
+
+
 <h1>Your crush details</h1>
 <%= @fr.name %>
 <%= @fr.email %>
 <%= @fr.friend %>
 <%= @fr.hint %>
-<%else%>
-<h1>Still No,reply From Your Crush .</h1>
-<%end%>
+
