@@ -81,16 +81,20 @@
     
         
             <div class="tab-pane fade" id="tel">
+             <div class="container-fluid">
              <center><p>
              	         	</br></br></br>
-                        <div class="container-fluid">
+                       
 <% @fb.each do |tab| %>
-<p><b>Your Email</b></p>
-<%= tab.email %>
-<b>Your Userid</b><%= tab.userid %>
-<b>Your Hint</b><%= tab.hint %>
-<b>Your Friend</b><%= tab.friend %>
- <%= link_to("Show", {:action => 'show', :id => tab.friend}) %>
+<table>
+<tr><td><p><b>Your Email</b></p></td>
+<td><%= tab.email %></td></tr>
+<tr><td><b>Your Userid</b><%= tab.userid %></td>
+<td><b>Your Hint</b><%= tab.hint %></td></tr>
+<tr>
+
+ <%= link_to("Your Crush", {:action => 'show', :id => tab.friend}) %>
+ </table>
  <%end%>
 </div>
 
